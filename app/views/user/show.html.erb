@@ -1,0 +1,14 @@
+<h1>회원님의 정보는 다음과 같습니다.</h1>
+
+<h2>User_ID : <%= @user.user_name %></h2>
+<hr/>
+<p>Last Login At : <%= @user.ip_address %></p>
+
+<hr/>
+
+<h2>이 유저가 작성한 글 목록</h2>
+<% @user.posts.each do |post| %>
+    <%= link_to post.title, "/board/#{post.id}" %><br/>
+<% end %>
+<%= link_to "수정하기", "/user/#{@user.id}/edit" %>
+<%= link_to "전체 글 보기", '/' %>

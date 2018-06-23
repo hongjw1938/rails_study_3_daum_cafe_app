@@ -1,0 +1,5 @@
+<%= form_tag("/user/#{@user.id}", method: "PATCH") do %>
+    아이디 : <%= text_field_tag(:user_name, @user.user_name, readonly: true) %><br/>
+    비밀번호 : <%= password_field_tag(:password) %>
+    <%= submit_tag("수정하기") %>
+<% end %>

@@ -1,0 +1,7 @@
+<h1>생성된 카페</h1>
+카페 명 : <%= @cafe.title %></br>
+카페 설명 : <%= @cafe.description %>
+<br/>
+<%= link_to "전체 카페 보기", "/cafe/index" %>
+<%= link_to "글 목록 보기", "/"  %>
+<%= link_to "삭제", "/board/#{@cafe.id}/", :method => "delete" %>
