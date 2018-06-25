@@ -40,6 +40,9 @@ class UserController < ApplicationController
   def sign_in
     # 로그인 되어 있는 경우 이전 페이지로 돌아감.
     # 로그인 되어 있지 않은 경우 로그인페이지로
+    
+    
+    @sign_up = "sign_up 테스트!!"
   end
   
   def login

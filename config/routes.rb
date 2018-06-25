@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   
 
+  resources :themes
   root 'board#index'
   get '/boards' => 'board#index'
   
+  
+  get '/board/test' => 'board#test'
   get '/board/new' => 'board#new'
   get '/board/:id' => 'board#show'
   
@@ -13,6 +16,8 @@ Rails.application.routes.draw do
   put '/board/:id' => 'board#update'
   patch '/board/:id' => 'board#update'
   delete '/board/:id' => 'board#destroy'
+  
+  
   
   get '/users' => 'user#index'
   get '/sign_up' => 'user#new'
